@@ -4,10 +4,11 @@
       <Title Title="Specialists In Modern Construction" />
       <div class="row">
         <GreyCard
-          v-for="title in titles"
-          :key="title"
-          :title="title"
-          :description="description"
+          v-for="card in greyCardS"
+          :key="card.title"
+          :title="card.title"
+          :description="card.description"
+          :icon="card.icon"
         />
       </div>
     </div>
@@ -34,6 +35,7 @@
             :key="card.desc"
             :desc="card.desc"
             :count="card.count"
+            :icon="card.icon"
           />
         </div>
       </div>
@@ -57,10 +59,16 @@
       <div class="container">
         <Title Title="Explore Recent Work" />
         <div class="row">
-          <CardShow v-for="card in showCards" :key="card.url1" :card="card" />
+          <CardShow
+            v-for="card in showCards"
+            :key="card.url1"
+            :card="card"
+            :url="card.url1"
+          />
         </div>
       </div>
     </div>
+    <AllArticles />
   </section>
 </template>
 
@@ -69,6 +77,7 @@ import Title from "./Title.vue";
 import GreyCard from "./GreyCard.vue";
 import InvisibleCard from "./InvisibleCard.vue";
 import CardShow from "./CardShow.vue";
+import AllArticles from "./AllArticles.vue";
 
 export default {
   name: "WorksSection",
@@ -77,34 +86,58 @@ export default {
     GreyCard,
     InvisibleCard,
     CardShow,
+    AllArticles,
   },
   props: ["showCards"],
   data() {
     return {
-      titles: ["Buildings", "Renovate", "Construct", "Exclusive"],
-      description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia",
+      greyCardS: [
+        {
+          title: "Buildings",
+          icon: "fa-building",
+          description:
+            "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia",
+        },
+        {
+          title: "Renovate",
+          icon: "fa-sync-alt",
+          description:
+            "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia",
+        },
+        {
+          title: "Construct",
+          icon: "fa-home-lg",
+          description:
+            "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia",
+        },
+        {
+          title: "Exclusive",
+          icon: "fa-truck",
+          description:
+            "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia",
+        },
+      ],
 
       invisibleCards: [
         {
           desc: "PLANNING APPLICATIONS",
           count: 3534,
-          icon: "<i class='fas fa-folder'></i>",
+          icon: "fa-folder",
         },
         {
           desc: "COMPLETED PROJECTS",
           count: 896,
-          icon: "<i class='fas fa-folder'></i>",
+          icon: "fa-building",
         },
         {
           desc: "TRAINED PROFESSIONALS",
           count: 172,
-          icon: "<i class='fas fa-folder'></i>",
+          icon: "fa-users",
         },
         {
           desc: "INTERNATIONAL OFFICES",
           count: 19,
-          icon: "<i class='fas fa-folder'></i>",
+          icon: "fa-globe",
         },
       ],
     };

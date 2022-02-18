@@ -1,7 +1,7 @@
 <template>
   <div class="col-3">
-    <div class="card-invisible">
-      <i class="fas fa-building"></i>
+    <div class="card-invisible text-center">
+      <i class="fas" :class="icon"></i>
       <h3>{{ count }}</h3>
       <p>{{ desc }}</p>
     </div>
@@ -21,6 +21,7 @@ export default {
 h3,
 i {
   color: $my-yellow;
+  font-size: 3rem;
 }
 p {
   color: white;

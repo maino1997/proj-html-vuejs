@@ -25,6 +25,7 @@
     <!-- Works Section  -->
 
     <WorksSection :showCards="showCards" />
+    <ValueSection :showCards="showCards" />
   </main>
 </template>
 
@@ -32,6 +33,7 @@
 import YellowButton from "./YellowButton.vue";
 import BlackButton from "./BlackButton.vue";
 import WorksSection from "./WorksSection.vue";
+import ValueSection from "./ValueSection.vue";
 
 export default {
   name: "Main",
@@ -39,6 +41,7 @@ export default {
     YellowButton,
     BlackButton,
     WorksSection,
+    ValueSection,
   },
   data() {
     return {

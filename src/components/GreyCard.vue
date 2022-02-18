@@ -1,7 +1,7 @@
 <template>
   <div class="col-3">
     <div class="card">
-      <i class="fas fa-building"></i>
+      <i class="fas" :class="icon"></i>
       <h3>{{ title }}</h3>
       <p>{{ description }}</p>
     </div>
@@ -11,7 +11,7 @@
 <script>
 export default {
   name: "GreyCard",
-  props: ["title", "description"],
+  props: ["title", "description", "icon"],
 };
 </script>
 

@@ -3,11 +3,9 @@
     <header>
       <img src="../assets/construction_logo.png" alt="logo" />
       <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">SERVICIES</a></li>
-        <li><a href="#">WORK</a></li>
-        <li><a href="#">ARTICLES</a></li>
+        <li v-for="link in headerLinks" :key="link.text">
+          <a :href="link.link">{{ link.text }}</a>
+        </li>
       </ul>
       <YellowButton ButtonText="Get Quote" />
     </header>
@@ -19,6 +17,7 @@ import YellowButton from "./YellowButton.vue";
 export default {
   components: { YellowButton },
   name: "Header",
+  props: ["headerLinks", "showCards"],
 };
 </script>
 
