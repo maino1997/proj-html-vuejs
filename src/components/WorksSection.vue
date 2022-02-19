@@ -62,7 +62,7 @@
           <CardShow
             v-for="card in showCards"
             :key="card.url1"
-            :card="card"
+            card=""
             :url="card.url1"
           />
         </div>

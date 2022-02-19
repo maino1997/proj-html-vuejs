@@ -55,9 +55,11 @@
           :key="card.url2"
           :card="card"
           :url="card.url2"
+          show="false"
         />
       </div>
     </div>
+    <AllArticles />
   </section>
 </template>
 
@@ -65,6 +67,7 @@
 import Title from "./Title.vue";
 import ValuesCard from "./ValuesCard.vue";
 import CardShow from "./CardShow.vue";
+import AllArticles from "./AllArticles.vue";
 
 export default {
   name: "ValueSection",
@@ -72,6 +75,7 @@ export default {
     Title,
     ValuesCard,
     CardShow,
+    AllArticles,
   },
   props: ["showCards"],
   data() {

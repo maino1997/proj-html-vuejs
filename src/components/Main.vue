@@ -26,6 +26,7 @@
 
     <WorksSection :showCards="showCards" />
     <ValueSection :showCards="showCards" />
+    <PartnerSection />
   </main>
 </template>
 
@@ -34,6 +35,7 @@ import YellowButton from "./YellowButton.vue";
 import BlackButton from "./BlackButton.vue";
 import WorksSection from "./WorksSection.vue";
 import ValueSection from "./ValueSection.vue";
+import PartnerSection from "./PartnerSection.vue";
 
 export default {
   name: "Main",
@@ -42,6 +44,7 @@ export default {
     BlackButton,
     WorksSection,
     ValueSection,
+    PartnerSection,
   },
   data() {
     return {
@@ -52,6 +55,7 @@ export default {
           title: "Redeveloping Florida’s Remote Southern Coast",
           description:
             "Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed",
+          date: "December 7th, 2015",
         },
         {
           url1: require("../assets/prima.jpg"),
@@ -59,6 +63,7 @@ export default {
           title: "How We Manage Large Construction Projects",
           description:
             "Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed",
+          date: "December 7th, 2015",
         },
         {
           url1: require("../assets/terza.jpg"),
@@ -66,6 +71,7 @@ export default {
           title: "Future proofing a modern home",
           description:
             "Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed",
+          date: "December 6th, 2015",
         },
       ],
     };

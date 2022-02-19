@@ -33,6 +33,7 @@ export default {
 }
 
 .col-8 {
+  padding-top: 30px;
   align-items: center;
 }
 </style>
