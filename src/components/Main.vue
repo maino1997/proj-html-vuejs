@@ -56,6 +56,8 @@ export default {
           description:
             "Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed",
           date: "December 7th, 2015",
+          hoverTitle: "Florida Health Facility",
+          hoverText: "Commercial",
         },
         {
           url1: require("../assets/prima.jpg"),
@@ -64,6 +66,8 @@ export default {
           description:
             "Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed",
           date: "December 7th, 2015",
+          hoverTitle: "Maine Modernity",
+          hoverText: "Residential",
         },
         {
           url1: require("../assets/terza.jpg"),
@@ -72,6 +76,8 @@ export default {
           description:
             "Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed",
           date: "December 6th, 2015",
+          hoverTitle: "Exclusive Urban Living",
+          hoverText: "Commercial",
         },
       ],
     };
@@ -81,6 +87,11 @@ export default {
 
 <style scoped lang="scss">
 @import "../sass/vars.scss";
+
+main {
+  padding-top: 140px;
+}
+
 .jumbotron-top {
   background-image: url("https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/home-slider-62528242.jpg");
 }

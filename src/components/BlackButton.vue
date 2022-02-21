@@ -17,5 +17,9 @@ button {
   border: 0;
   padding: 10px 25px;
   color: white;
+  &:hover {
+    background-color: $my-yellow;
+    color: black;
+  }
 }
 </style>

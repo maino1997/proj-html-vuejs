@@ -9,17 +9,8 @@
           <li><a href="#"> POWERED BY WORDPRESS</a></li>
         </ul>
         <ul class="d-flex">
-          <li>
-            <a href="#"><i class="bi bi-facebook"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="bi bi-twitter"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="bi bi-youtube"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="bi bi-instragram"></i></a>
+          <li v-for="link in socialLinks" :key="link.class">
+            <a href="#"><i class="bi" :class="link.class"></i></a>
           </li>
         </ul>
       </div>
@@ -30,6 +21,24 @@
 <script>
 export default {
   name: "FooterBottom",
+  data() {
+    return {
+      socialLinks: [
+        {
+          class: "bi-facebook",
+        },
+        {
+          class: "bi-twitter",
+        },
+        {
+          class: "bi-youtube",
+        },
+        {
+          class: "bi-instagram",
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -63,5 +72,8 @@ a {
   align-items: center;
   color: rgb(116, 116, 116);
   height: 100%;
+  i {
+    font-size: 1.3rem;
+  }
 }
 </style>

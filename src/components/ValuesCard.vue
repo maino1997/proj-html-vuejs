@@ -43,6 +43,7 @@ h3 {
 
 p {
   font-size: 0.9rem;
+  margin-bottom: 30px;
 }
 
 .bgG {

@@ -1,9 +1,9 @@
 <template>
   <section id="partners">
     <div class="container">
-      <Title Title="Trusted Partners" />
+      <Title Title="Trusted Partners" :show="true" />
     </div>
-    <div class="container-strict">
+    <div class="container-strict card-slider">
       <div class="row">
         <PartnerCard
           v-for="(card, index) in partners"
@@ -70,6 +70,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+section {
+  padding-top: 60px;
+}
+
 .partner-jumbotron {
   background-image: url("../assets/bottom-jumbotron.jpg");
   padding-top: 200px;
@@ -86,6 +90,10 @@ p {
 
 p {
   font-size: 20px;
+}
+
+.card-slider {
+  margin-bottom: 100px;
 }
 
 #building {

@@ -1,7 +1,7 @@
 <template>
   <section id="value-section">
     <div class="container">
-      <Title title="Our Core Values" />
+      <Title title="Our Core Values" :show="true" />
     </div>
     <div class="container-strict">
       <div class="row">
@@ -30,6 +30,10 @@
       >
         <path d="M0 100 C40 0 60 0 100 100 Z"></path>
       </svg>
+      <div class="container-strict text-center">
+        <Title Title="Our Owner Say" :show="false" />
+        <Slider />
+      </div>
       <svg
         class="fusion-big-half-circle-candy"
         xmlns="http://www.w3.org/2000/svg"
@@ -46,9 +50,9 @@
       </svg>
     </div>
     <div class="container">
-      <Title Title="Latest News" />
+      <Title Title="Latest News" :show="true" />
     </div>
-    <div class="container">
+    <div class="container-strict">
       <div class="row">
         <CardShow
           v-for="card in showCards"
@@ -68,6 +72,7 @@ import Title from "./Title.vue";
 import ValuesCard from "./ValuesCard.vue";
 import CardShow from "./CardShow.vue";
 import AllArticles from "./AllArticles.vue";
+import Slider from "./Slider.vue";
 
 export default {
   name: "ValueSection",
@@ -76,6 +81,7 @@ export default {
     ValuesCard,
     CardShow,
     AllArticles,
+    Slider,
   },
   props: ["showCards"],
   data() {
@@ -119,6 +125,7 @@ export default {
 #value-section {
   padding-top: 80px;
   background-color: #f5f5f5;
+  padding-bottom: 120px;
 }
 
 .slider {
@@ -126,16 +133,17 @@ export default {
   min-height: 500px;
   background-position: center;
   position: relative;
+  padding-top: 40px;
+  color: white;
+
   #sup-svg {
     position: absolute;
     top: 0px;
     transform: rotate(180deg);
-    // background-color: #f5f5f5;
   }
   #down-svg {
     position: absolute;
     bottom: 0px;
-    // background-color: #f5f5f5;
   }
 }
 

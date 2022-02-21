@@ -1,11 +1,21 @@
 <template>
   <div class="col-4">
     <div class="card-show">
-      <figure>
+      <figure class="figcont">
+        <div class="show-over">
+          <div class="show-inner">
+            <figure><i class="bi bi-link-45deg"></i></figure>
+            <figure><i class="bi bi-search"></i></figure>
+          </div>
+          <div class="show-inner-description text-white text-center">
+            <h4>{{ hoverTitle }}</h4>
+            <p>{{ hoverText }}</p>
+          </div>
+        </div>
         <img :src="url" alt="image" />
-        <h4>{{ card.title }}</h4>
-        <figcaption id="date">{{ card.date }}</figcaption>
       </figure>
+      <h4>{{ card.title }}</h4>
+      <figcaption id="date">{{ card.date }}</figcaption>
       <hr v-if="show" />
       <p>{{ card.description }}</p>
     </div>
@@ -15,18 +25,32 @@
 <script>
 export default {
   name: "ShowCard",
-  props: ["card", "url", "show"],
+  props: ["card", "url", "show", "hoverTitle", "hoverText"],
+  data() {
+    return {};
+  },
 };
 </script>
 
 <style scoped lang="scss">
+@import "../sass/vars.scss";
+
 .card-show {
   background-color: white;
   font-family: Raleway, Arial, Helvetica, sans-serif;
+  padding-bottom: 30px;
+  .figcont {
+    position: relative;
+    &:hover .show-over {
+      opacity: 1;
+    }
+  }
 }
 img {
   width: 100%;
+  height: 100%;
 }
+
 h4 {
   margin-top: 20px;
   padding: 20px;
@@ -45,5 +69,45 @@ figcaption {
 p {
   padding: 20px;
   color: rgb(116, 116, 116);
+  margin-bottom: 30px;
+}
+
+.show-over {
+  transition: 0.2s linear;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $my-yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .show-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    figure {
+      background-color: white;
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin-right: 10px;
+      margin-left: 10px;
+      i {
+        font-size: 1.6rem;
+        color: black;
+      }
+    }
+  }
+}
+.show-inner-description p {
+  color: white;
 }
 </style>

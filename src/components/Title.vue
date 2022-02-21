@@ -3,7 +3,7 @@
     <div class="col-8 d-flex flex-column text-center">
       <h3>{{ Title }}</h3>
       <div class="yellow-bar"></div>
-      <p class="text-center">
+      <p class="text-center" v-if="show">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua ut enim ad minim
         veniam.
@@ -16,7 +16,7 @@
 export default {
   name: "Title",
   components: {},
-  props: ["Title"],
+  props: ["Title", "show"],
 };
 </script>
 

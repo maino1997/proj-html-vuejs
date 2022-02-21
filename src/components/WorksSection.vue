@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="container">
-      <Title Title="Specialists In Modern Construction" />
+      <Title Title="Specialists In Modern Construction" :show="true" />
       <div class="row">
         <GreyCard
           v-for="card in greyCards"
@@ -57,13 +57,15 @@
 
     <div class="recent-work">
       <div class="container">
-        <Title Title="Explore Recent Work" />
+        <Title Title="Explore Recent Work" :show="true" />
         <div class="row">
           <CardShow
             v-for="card in showCards"
             :key="card.url1"
             card=""
             :url="card.url1"
+            :hoverTitle="card.hoverTitle"
+            :hoverText="card.hoverText"
           />
         </div>
       </div>
@@ -122,22 +124,22 @@ export default {
         {
           desc: "PLANNING APPLICATIONS",
           count: 3534,
-          icon: "fa-folder",
+          icon: "bi-folder",
         },
         {
           desc: "COMPLETED PROJECTS",
           count: 896,
-          icon: "fa-building",
+          icon: "bi-building",
         },
         {
           desc: "TRAINED PROFESSIONALS",
           count: 172,
-          icon: "fa-users",
+          icon: "bi-people-fill",
         },
         {
           desc: "INTERNATIONAL OFFICES",
           count: 19,
-          icon: "fa-globe",
+          icon: "bi-globe2",
         },
       ],
     };
