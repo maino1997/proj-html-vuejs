@@ -3,10 +3,11 @@
     <div class="container">
       <div class="content">
         <ul class="d-flex">
-          <li><a href="#">©COPYRIGHT 2012 - 2022 |</a></li>
-          <li><a href="#">AVADA THEME BY THEMEFUSION |</a></li>
-          <li><a href="#"> ALL RIGHTS RESERVED |</a></li>
-          <li><a href="#"> POWERED BY WORDPRESS</a></li>
+          <li v-for="right in rights" :key="right.text">
+            <a href="#">
+              {{ right.text }}
+            </a>
+          </li>
         </ul>
         <ul class="d-flex">
           <li v-for="link in socialLinks" :key="link.class">
@@ -21,6 +22,7 @@
 <script>
 export default {
   name: "FooterBottom",
+  props: ["rights"],
   data() {
     return {
       socialLinks: [

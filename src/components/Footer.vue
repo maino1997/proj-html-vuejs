@@ -40,33 +40,15 @@
         </div>
         <div class="col-3">
           <h3>CONTACT US TODAY</h3>
-          <div class="footer-address">
-            <span><i class="bi bi-globe2"></i></span>
+          <div
+            class="footer-address"
+            v-for="date in footerContacts"
+            :key="date.text"
+          >
+            <span><i class="bi" :class="date.icon"></i></span>
             <p class="desc">
-              Corporate Location 1600 Amphitheatre Parkway London WC1 1BA
+              {{ date.text }}
             </p>
-          </div>
-          <div class="footer-address">
-            <span><i class="bi bi-house"></i></span>
-            <p class="desc">
-              Residential Location 9521 Broadsberry Avenue Paddington RC7 9ZA
-            </p>
-          </div>
-          <div class="footer-address">
-            <span><i class="bi bi-telephone"></i></span>
-            <p class="desc">1.800.458.556 / 1.800.532.2112</p>
-          </div>
-          <div class="footer-address">
-            <span><i class="bi bi-telephone"></i></span>
-            <p class="desc">info@your-domain.com</p>
-          </div>
-          <div class="footer-address">
-            <span><i class="bi bi-clock"></i></span>
-            <p class="desc">Monday – Friday: 9:00 AM – 6:00 PM</p>
-          </div>
-          <div class="footer-address">
-            <span><i class="bi bi-clock"></i></span>
-            <p class="desc">Saturday – Sunday: 9:00 AM – 12:00 PM</p>
           </div>
         </div>
         <div class="col-3">
@@ -77,7 +59,7 @@
         </div>
       </div>
     </div>
-    <FooterBottom />
+    <FooterBottom :rights="rights" />
   </footer>
 </template>
 
@@ -91,6 +73,7 @@ export default {
     YellowButton,
     FooterBottom,
   },
+  props: ["footerContacts", "rights"],
 };
 </script>
 
