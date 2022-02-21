@@ -19,6 +19,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../sass/vars.scss";
+
 i {
   font-size: 3.5rem;
   color: white;
@@ -33,6 +35,13 @@ figure {
   height: 120px;
   text-align: center;
   margin: auto;
+  transition: 0.2s linear;
+  &:hover {
+    box-shadow: 0 1px 70px $my-yellow;
+    background-color: $my-yellow;
+    transform: scale(0.9);
+    cursor: pointer;
+  }
 }
 
 h3 {

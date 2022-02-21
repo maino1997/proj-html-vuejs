@@ -66,6 +66,11 @@ export default {
       ],
     };
   },
+  methods: {
+    isIndex(index) {
+      return index === this.currentIndex;
+    },
+  },
 };
 </script>
 

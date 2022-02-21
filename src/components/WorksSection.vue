@@ -68,6 +68,7 @@
             :hoverTextUp="card.hoverTextUp"
             :visible1="true"
             :visible2="false"
+            :visible3="false"
           />
         </div>
       </div>
@@ -172,5 +173,6 @@ section {
   position: relative;
   display: flex;
   align-items: center;
+  padding: 150px 0;
 }
 </style>

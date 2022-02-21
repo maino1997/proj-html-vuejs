@@ -2,14 +2,25 @@
   <div>
     <div
       class="test"
-      v-for="testimonial in testimonials"
+      v-for="(testimonial, index) in testimonials"
       :key="testimonial.img"
     >
-      <figure>
-        <img alt="testimonial" class="testimonial" :src="testimonial.img" />
-      </figure>
-      <p>{{ testimonial.parag }}</p>
-      <p>{{ testimonial.desc }}</p>
+      <div v-if="isIndex(index)">
+        <figure>
+          <img alt="testimonial" class="testimonial" :src="testimonial.img" />
+        </figure>
+        <p class="italic">{{ testimonial.parag }}</p>
+        <p>{{ testimonial.desc }}</p>
+      </div>
+    </div>
+    <div class="dots">
+      <div
+        class="dot"
+        :class="{ white: isIndex(index) }"
+        v-for="(dot, index) in 2"
+        :key="index"
+        @click="setIndex(index)"
+      ></div>
     </div>
   </div>
 </template>
@@ -55,6 +66,25 @@ export default {
         this.currentTest.push(testimonial);
       }
     },
+    isIndex(index) {
+      return index === this.currentIndex;
+    },
+    nextPic() {
+      if (this.currentIndex === this.testimonials.length - 1) {
+        this.currentIndex = 0;
+      } else {
+        this.currentIndex++;
+      }
+    },
+    setIndex(index) {
+      this.currentIndex = index;
+    },
+    startAutoPlay() {
+      setInterval(this.nextPic, 4000);
+    },
+  },
+  created() {
+    this.startAutoPlay();
   },
 };
 </script>
@@ -64,5 +94,27 @@ export default {
   height: 120px;
   width: 120px;
   border-radius: 50%;
+  font-weight: 500;
+}
+
+.italic {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.white {
+  background-color: white;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
 }
 </style>

@@ -136,7 +136,8 @@ export default {
   min-height: 500px;
   background-position: center;
   position: relative;
-  padding-top: 40px;
+  padding-top: 100px;
+  padding-bottom: 120px;
   color: white;
 
   #sup-svg {

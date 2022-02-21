@@ -1,5 +1,14 @@
 <template>
   <main>
+    <div class="fixed-right" id="first">
+      <i class="bi bi-handbag-fill"></i>
+      <p class="text-dark">Demons</p>
+    </div>
+    <div class="fixed-right" id="second">
+      <p id="g">$ 39</p>
+      <p>Buy Now</p>
+    </div>
+
     <!-- Jumbotron Top  -->
     <div class="jumbotron-top">
       <div class="container-strict">
@@ -96,8 +105,14 @@ main {
 }
 
 .jumbotron-top {
-  background-image: url("https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/home-slider-62528242.jpg");
+  background-image: url("../assets/home.jpg");
+  background-size: cover;
 }
+
+.buttons {
+  margin-bottom: 55px;
+}
+
 h1 {
   font-weight: bolder;
   color: white;
@@ -127,5 +142,41 @@ button {
     position: absolute;
     top: 120px;
   }
+}
+
+.fixed-right {
+  position: fixed;
+  z-index: 2;
+  right: 20px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+  p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500px;
+  }
+  i {
+    font-size: 1.5rem;
+  }
+}
+
+#first {
+  top: 160px;
+  padding: 8px 10px;
+}
+
+#second {
+  top: 250px;
+  padding: 10px 8px;
+}
+
+#g {
+  color: green;
+  font-size: 18px;
 }
 </style>

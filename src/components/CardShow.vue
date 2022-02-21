@@ -20,10 +20,10 @@
         </div>
         <img :src="url" alt="image" />
       </figure>
-      <h4>{{ card.title }}</h4>
-      <figcaption id="date">{{ card.date }}</figcaption>
+      <h4 v-if="show">{{ card.title }}</h4>
+      <figcaption v-if="show" class="date">{{ card.date }}</figcaption>
       <hr v-if="show" />
-      <p>{{ card.description }}</p>
+      <p v-if="show">{{ card.description }}</p>
     </div>
   </div>
 </template>
@@ -40,6 +40,7 @@ export default {
     "hoverTextDown",
     "visible1",
     "visible2",
+    "visible3",
   ],
   data() {
     return {
@@ -79,14 +80,17 @@ hr {
   width: 90%;
   margin: auto;
 }
-figcaption {
+.date {
   padding: 0 20px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 500;
 }
 p {
   padding: 20px;
   color: rgb(116, 116, 116);
   margin-bottom: 30px;
+  font-weight: 500;
 }
 
 .show-over {
