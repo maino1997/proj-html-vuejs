@@ -4,7 +4,7 @@
       <Title Title="Specialists In Modern Construction" />
       <div class="row">
         <GreyCard
-          v-for="card in greyCardS"
+          v-for="card in greyCards"
           :key="card.title"
           :title="card.title"
           :description="card.description"
@@ -91,28 +91,28 @@ export default {
   props: ["showCards"],
   data() {
     return {
-      greyCardS: [
+      greyCards: [
         {
           title: "Buildings",
-          icon: "fa-building",
+          icon: "bi-building",
           description:
             "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia",
         },
         {
           title: "Renovate",
-          icon: "fa-sync-alt",
+          icon: "bi-arrow-repeat",
           description:
             "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia",
         },
         {
           title: "Construct",
-          icon: "fa-home-lg",
+          icon: "bi-house-door-fill",
           description:
             "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia",
         },
         {
           title: "Exclusive",
-          icon: "fa-truck",
+          icon: "bi-truck",
           description:
             "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia",
         },

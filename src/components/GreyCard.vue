@@ -1,7 +1,7 @@
 <template>
   <div class="col-3">
     <div class="card">
-      <i class="fas" :class="icon"></i>
+      <i class="bi" :class="icon"></i>
       <h3>{{ title }}</h3>
       <p>{{ description }}</p>
     </div>
@@ -28,7 +28,7 @@ p {
   font-size: 15px;
 }
 
-.fas {
+.bi {
   font-size: 3rem;
   margin-bottom: 20px;
 }

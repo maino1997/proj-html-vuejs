@@ -48,7 +48,7 @@
     <div class="container">
       <Title Title="Latest News" />
     </div>
-    <div class="container-strict">
+    <div class="container">
       <div class="row">
         <CardShow
           v-for="card in showCards"
@@ -85,28 +85,28 @@ export default {
           title: "Great Service",
           description:
             "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia",
-          icon: "fa-house",
+          icon: "bi-house-door-fill",
           bg: "bgL",
         },
         {
           title: "Highest Standard",
           description:
             "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia",
-          icon: "fa-cog",
+          icon: "bi-gear",
           bg: "bgB",
         },
         {
           title: "Professional Team",
           description:
             "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia",
-          icon: "fa-users",
+          icon: "bi-people-fill",
           bg: "bgR",
         },
         {
           title: "Creative Solutions",
           description:
             "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia",
-          icon: "fa-lightbulb",
+          icon: "bi-lightbulb",
           bg: "bgG",
         },
       ],

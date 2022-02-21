@@ -30,6 +30,7 @@ img {
 h4 {
   margin-top: 20px;
   padding: 20px;
+  letter-spacing: 1px;
 }
 hr {
   border-color: rgb(205, 205, 205);
@@ -43,5 +44,6 @@ figcaption {
 }
 p {
   padding: 20px;
+  color: rgb(116, 116, 116);
 }
 </style>
