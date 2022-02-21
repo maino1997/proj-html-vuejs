@@ -8,8 +8,14 @@
             <figure><i class="bi bi-search"></i></figure>
           </div>
           <div class="show-inner-description text-white text-center">
-            <h4>{{ hoverTitle }}</h4>
-            <p>{{ hoverText }}</p>
+            <h4 v-if="visible1">
+              {{ hoverTitle }}
+            </h4>
+            <h4 v-if="visible2">
+              {{ card.title }}
+            </h4>
+            <p v-if="visible1">{{ hoverTextUp }}</p>
+            <p v-if="visible2">{{ hoverTextDown }}</p>
           </div>
         </div>
         <img :src="url" alt="image" />
@@ -25,9 +31,20 @@
 <script>
 export default {
   name: "ShowCard",
-  props: ["card", "url", "show", "hoverTitle", "hoverText"],
+  props: [
+    "card",
+    "url",
+    "show",
+    "hoverTitle",
+    "hoverTextUp",
+    "hoverTextDown",
+    "visible1",
+    "visible2",
+  ],
   data() {
-    return {};
+    return {
+      name: "ShowCard",
+    };
   },
 };
 </script>
@@ -85,10 +102,12 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 20px 0;
   .show-inner {
     display: flex;
     justify-content: center;
     align-items: center;
+
     figure {
       background-color: white;
       border-radius: 50%;
@@ -98,6 +117,7 @@ p {
       justify-content: center;
       align-items: center;
       padding: 0;
+      margin-top: 50px;
       margin-right: 10px;
       margin-left: 10px;
       i {
@@ -109,5 +129,9 @@ p {
 }
 .show-inner-description p {
   color: white;
+}
+.show-inner-description h4 {
+  margin: 0;
+  padding: 0;
 }
 </style>

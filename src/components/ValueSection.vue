@@ -58,8 +58,11 @@
           v-for="card in showCards"
           :key="card.url2"
           :card="card"
+          :hoverTextDown="card.hoverTextDown"
           :url="card.url2"
           show="false"
+          :visible2="true"
+          :visible1="false"
         />
       </div>
     </div>

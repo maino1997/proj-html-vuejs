@@ -65,7 +65,9 @@
             card=""
             :url="card.url1"
             :hoverTitle="card.hoverTitle"
-            :hoverText="card.hoverText"
+            :hoverTextUp="card.hoverTextUp"
+            :visible1="true"
+            :visible2="false"
           />
         </div>
       </div>

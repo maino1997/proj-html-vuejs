@@ -57,7 +57,8 @@ export default {
             "Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed",
           date: "December 7th, 2015",
           hoverTitle: "Florida Health Facility",
-          hoverText: "Commercial",
+          hoverTextUp: "Commercial",
+          hoverTextDown: "Architecture, Buildings, Constructions, News",
         },
         {
           url1: require("../assets/prima.jpg"),
@@ -67,7 +68,8 @@ export default {
             "Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed",
           date: "December 7th, 2015",
           hoverTitle: "Maine Modernity",
-          hoverText: "Residential",
+          hoverTextUp: "Residential",
+          hoverTextDown: "Architecture, Construction, Engineering",
         },
         {
           url1: require("../assets/terza.jpg"),
@@ -77,7 +79,8 @@ export default {
             "Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed",
           date: "December 6th, 2015",
           hoverTitle: "Exclusive Urban Living",
-          hoverText: "Commercial",
+          hoverTextUp: "Commercial",
+          hoverTextDown: "Architecture, Construction, Marketing",
         },
       ],
     };
