@@ -143,6 +143,8 @@ button {
   #bottom-black-button {
     position: absolute;
     top: 120px;
+    border: 2px solid white;
+
     &:hover {
       color: black;
       background-color: white;
