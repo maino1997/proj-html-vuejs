@@ -6,6 +6,16 @@
         <div class="right-block">
           <ul>
             <li v-for="link in headerLinks" :key="link.text">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                class="svg-triangle"
+                width="80"
+                height="30"
+                fill="white"
+              >
+                <path d="M 50,5 95,97.5 5,97.5 z" />
+              </svg>
               <a :href="link.link">{{ link.text }}</a>
             </li>
           </ul>
@@ -51,8 +61,13 @@ ul {
   li {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 100%;
     margin-left: 40px;
+    position: relative;
+    &:hover svg {
+      display: block;
+    }
     a {
       height: 100%;
       display: flex;
@@ -73,5 +88,14 @@ ul {
     height: 50px;
     margin-left: 50px;
   }
+}
+
+svg {
+  display: none;
+  position: absolute;
+  bottom: -48px;
+  left: -35%;
+  transform: translate(50%);
+  transform: rotateX(180deg);
 }
 </style>
