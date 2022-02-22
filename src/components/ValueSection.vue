@@ -1,5 +1,6 @@
 <template>
   <section id="value-section">
+    <!-- First Block with Cards  -->
     <div class="container">
       <Title title="Our Core Values" :show="true" />
     </div>
@@ -15,6 +16,8 @@
         />
       </div>
     </div>
+
+    <!-- Slider Jumbotron  -->
     <div class="slider">
       <svg
         class="fusion-big-half-circle-candy"
@@ -49,6 +52,8 @@
         <path d="M0 100 C40 0 60 0 100 100 Z"></path>
       </svg>
     </div>
+
+    <!-- Latest News Block with Cards  -->
     <div class="container">
       <Title Title="Latest News" :show="true" />
     </div>

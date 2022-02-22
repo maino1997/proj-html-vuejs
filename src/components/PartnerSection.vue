@@ -1,5 +1,6 @@
 <template>
   <section id="partners">
+    <!-- First Block with Carousel Cards  -->
     <div class="container">
       <Title Title="Trusted Partners" :show="true" />
     </div>
@@ -35,6 +36,8 @@
         /> -->
       </div>
     </div>
+
+    <!-- Jumbotron Partner  -->
     <div class="partner-jumbotron">
       <div class="container-strict">
         <div class="row gx-5">

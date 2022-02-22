@@ -1,6 +1,7 @@
 <template>
   <section>
     <div class="container">
+      <!-- First Block  -->
       <Title Title="Specialists In Modern Construction" :show="true" />
       <div class="row">
         <GreyCard
@@ -14,6 +15,7 @@
       </div>
     </div>
 
+    <!-- Jumbotron with statistic -->
     <div class="statistic">
       <svg
         class="fusion-big-half-circle-candy"
@@ -56,6 +58,7 @@
       </svg>
     </div>
 
+    <!-- Second Block  -->
     <div class="recent-work">
       <div class="container">
         <Title Title="Explore Recent Work" :show="true" />

@@ -1,7 +1,9 @@
 <template>
   <footer>
     <div class="container">
+      <!-- Footer Top  -->
       <div class="row footer-top">
+        <!-- First Col  -->
         <div class="col-3">
           <img
             src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2017/02/footer-logo.png"
@@ -14,6 +16,8 @@
           </p>
           <YellowButton ButtonText="LEARN MORE" />
         </div>
+
+        <!-- Second Col  -->
         <div class="col-3">
           <h3>LATEST TWEET</h3>
           <div class="twitter">
@@ -41,6 +45,8 @@
             <span>22h</span>
           </div>
         </div>
+
+        <!-- Third Col  -->
         <div class="col-3">
           <h3 id="contact">CONTACT US TODAY</h3>
           <div
@@ -54,6 +60,8 @@
             </p>
           </div>
         </div>
+
+        <!-- Fourth Col  -->
         <div class="col-3">
           <h3>OUR LOCATION</h3>
           <!-- <div class="map">

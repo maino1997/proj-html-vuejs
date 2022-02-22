@@ -1,5 +1,6 @@
 <template>
   <main>
+    <!-- Fixed Right Elements  -->
     <div class="fixed-right" id="first">
       <i class="bi bi-handbag-fill"></i>
       <p class="text-dark">Demons</p>
@@ -25,14 +26,15 @@
           </div>
         </div>
       </div>
+
+      <!-- Yellow Bar  -->
       <div class="yellow-light">
         <h3>Do You Have A Construction Project We Can Help With?</h3>
         <BlackButton ButtonText="GET A FREE QUOTE" id="bottom-black-button" />
       </div>
     </div>
 
-    <!-- Works Section  -->
-
+    <!-- Sections  -->
     <WorksSection :showCards="showCards" />
     <ValueSection :showCards="showCards" />
     <PartnerSection />
