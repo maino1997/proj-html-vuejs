@@ -21,7 +21,7 @@
             <h4>We Build Inspiring Residential & Commercial Spaces</h4>
             <div class="buttons">
               <BlackButton ButtonText="EXPLORE RECENT WORK" />
-              <YellowButton ButtonText="GET QUOTE" />
+              <YellowButton ButtonText="GET A QUOTE TODAY" />
             </div>
           </div>
         </div>
