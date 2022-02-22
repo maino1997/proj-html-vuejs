@@ -9,7 +9,7 @@
               <a :href="link.link">{{ link.text }}</a>
             </li>
           </ul>
-          <YellowButton ButtonText="Get Quote" />
+          <YellowButton ButtonText="GET QUOTE" />
         </div>
       </div>
     </div>

@@ -5,11 +5,34 @@
     </div>
     <div class="container-strict card-slider">
       <div class="row">
-        <PartnerCard
+        <div class="carousel">
+          <PartnerCard
+            :url="partners[currentIndex].url"
+            class="fade-in slider-item"
+          />
+          <PartnerCard
+            :url="partners[secondIndex].url"
+            class="fade-in active slider-item"
+          />
+          <PartnerCard
+            :url="partners[thirdIndex].url"
+            class="fade-in active slider-item"
+          />
+          <PartnerCard
+            :url="partners[fourthIndex].url"
+            class="fade-in active slider-item"
+          />
+          <PartnerCard
+            :url="partners[fitfthIndex].url"
+            class="fade-in active slider-item"
+          />
+        </div>
+        <!-- <PartnerCard
           v-for="(card, index) in partners"
           :key="index"
           :url="card.url"
-        />
+          :card="card"
+        /> -->
       </div>
     </div>
     <div class="partner-jumbotron">
@@ -64,12 +87,69 @@ export default {
           url: require("../assets/partner5.png"),
         },
       ],
+      currentIndex: 0,
+      secondIndex: 1,
+      thirdIndex: 2,
+      fourthIndex: 3,
+      fitfthIndex: 4,
+      sixIndex: 5,
     };
   },
   methods: {
     isIndex(index) {
       return index === this.currentIndex;
     },
+    nextPic() {
+      if (this.currentIndex === this.partners.length - 1) {
+        this.currentIndex = 0;
+      } else {
+        this.currentIndex++;
+      }
+    },
+    secondNextPic() {
+      if (this.secondIndex === this.partners.length - 1) {
+        this.secondIndex = 0;
+      } else {
+        this.secondIndex++;
+      }
+    },
+    thirdNextPic() {
+      if (this.thirdIndex === this.partners.length - 1) {
+        this.thirdIndex = 0;
+      } else {
+        this.thirdIndex++;
+      }
+    },
+    fourthNextPic() {
+      if (this.fourthIndex === this.partners.length - 1) {
+        this.fourthIndex = 0;
+      } else {
+        this.fourthIndex++;
+      }
+    },
+    fitfthNextPic() {
+      if (this.fitfthIndex === this.partners.length - 1) {
+        this.fitfthIndex = 0;
+      } else {
+        this.fitfthIndex++;
+      }
+    },
+    sixNextPic() {
+      if (this.sixIndex === this.partners.length - 1) {
+        this.sixIndex = 0;
+      } else {
+        this.sixIndex++;
+      }
+    },
+  },
+  created() {
+    setInterval(() => {
+      this.nextPic();
+      this.secondNextPic();
+      this.thirdNextPic();
+      this.fourthNextPic();
+      this.fitfthNextPic();
+    }, 3000);
   },
 };
 </script>
@@ -110,5 +190,30 @@ p {
 #seconds {
   font-size: 15px;
   font-weight: 500;
+}
+
+.fade-in {
+  transition: 0.5s linear;
+}
+
+.carousel {
+  width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  inset: auto, auto, auto -115px;
+}
+
+.active {
+  animation: fadeIn 2s linear;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>

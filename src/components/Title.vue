@@ -36,4 +36,10 @@ export default {
   padding-top: 30px;
   align-items: center;
 }
+
+p {
+  line-height: 34.05px;
+  color: rgb(116, 116, 116);
+  font-weight: 500;
+}
 </style>

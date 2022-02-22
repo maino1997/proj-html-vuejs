@@ -34,7 +34,8 @@ export default {
   padding: 10px;
   border: 0;
   position: relative;
-  transition: transform 0.5s linear;
+  transition: transform 0.3s linear;
+  margin-bottom: 80px;
 
   &:hover .over {
     opacity: 1;
@@ -72,6 +73,7 @@ p {
   margin-bottom: 70px;
   margin-top: 10px;
   font-weight: 500;
+  line-height: 34.05px;
 }
 
 .bi {

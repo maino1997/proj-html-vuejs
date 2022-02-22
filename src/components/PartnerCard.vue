@@ -7,7 +7,10 @@
 <script>
 export default {
   name: "PartnerCard",
-  props: ["url"],
+  props: ["url", "card"],
+  data() {
+    return {};
+  },
 };
 </script>
 

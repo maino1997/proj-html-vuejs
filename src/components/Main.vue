@@ -19,15 +19,15 @@
             <h1>BUILDING INSPIRING SPACES</h1>
             <h4>We Build Inspiring Residential & Commercial Spaces</h4>
             <div class="buttons">
-              <BlackButton ButtonText="Explore Recent Work" />
-              <YellowButton ButtonText="Get Quote" />
+              <BlackButton ButtonText="EXPLORE RECENT WORK" />
+              <YellowButton ButtonText="GET QUOTE" />
             </div>
           </div>
         </div>
       </div>
       <div class="yellow-light">
         <h3>Do You Have A Construction Project We Can Help With?</h3>
-        <BlackButton ButtonText="Get a Free Quote" id="bottom-black-button" />
+        <BlackButton ButtonText="GET A FREE QUOTE" id="bottom-black-button" />
       </div>
     </div>
 
@@ -101,7 +101,7 @@ export default {
 @import "../sass/vars.scss";
 
 main {
-  padding-top: 140px;
+  padding-top: 138px;
 }
 
 .jumbotron-top {
@@ -141,6 +141,11 @@ button {
   #bottom-black-button {
     position: absolute;
     top: 120px;
+    &:hover {
+      color: black;
+      background-color: white;
+      border: 2px solid black;
+    }
   }
 }
 
@@ -154,7 +159,12 @@ button {
   flex-direction: column;
   align-items: center;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-
+  &:hover i {
+    animation: iconIn 0.2s linear;
+  }
+  &:hover {
+    cursor: pointer;
+  }
   p {
     margin: 0;
     font-size: 12px;
@@ -178,5 +188,17 @@ button {
 #g {
   color: green;
   font-size: 18px;
+}
+
+@keyframes iconIn {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(-120%);
+  }
+  100% {
+    transform: translate(0);
+  }
 }
 </style>

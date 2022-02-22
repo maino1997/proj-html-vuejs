@@ -5,7 +5,7 @@
       v-for="(testimonial, index) in testimonials"
       :key="testimonial.img"
     >
-      <div v-if="isIndex(index)">
+      <div v-if="isIndex(index)" :class="{ active: isIndex(index) }">
         <figure>
           <img alt="testimonial" class="testimonial" :src="testimonial.img" />
         </figure>
@@ -80,7 +80,7 @@ export default {
       this.currentIndex = index;
     },
     startAutoPlay() {
-      setInterval(this.nextPic, 4000);
+      setInterval(this.nextPic, 5000);
     },
   },
   created() {
@@ -115,6 +115,20 @@ export default {
     margin: 0 5px;
     border: 1px solid white;
     border-radius: 50%;
+  }
+}
+
+.active {
+  opacity: 1;
+  animation: fadeIn 2s linear;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 </style>

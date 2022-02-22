@@ -21,6 +21,10 @@ export default {
 <style scoped lang="scss">
 @import "../sass/vars.scss";
 
+.value-card {
+  margin-bottom: 80px;
+}
+
 i {
   font-size: 3.5rem;
   color: white;
@@ -53,6 +57,9 @@ h3 {
 p {
   font-size: 0.9rem;
   margin-bottom: 30px;
+  font-size: 15px;
+  line-height: 34.05px;
+  color: rgb(116, 116, 166);
 }
 
 .bgG {

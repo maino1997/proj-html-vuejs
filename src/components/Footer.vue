@@ -24,10 +24,13 @@
             </div>
           </div>
           <p class="twitter-desc">
-            With #Avada, you can build an online #Marketing powerhouse website
-            that will drive leads & sales from scratch. For a faster turnaround,
-            here are 10 prebuilt one-page websites to import at the click of a
-            button https://bit.ly/3pDih73 #WordPress #wordpresswebsite #HowTo
+            With <span>#Avada</span>, you can build an online #Marketing
+            powerhouse website that will drive leads & sales from scratch. For a
+            faster turnaround, here are 10 prebuilt one-page websites to import
+            at the click of a button
+            <span
+              >https://bit.ly/3pDih73 #WordPress #wordpresswebsite #HowTo</span
+            >
           </p>
           <img src="../assets/footer.jpeg" alt="twiterr" id="twitter-img" />
           <div class="icons text-white">
@@ -53,9 +56,14 @@
         </div>
         <div class="col-3">
           <h3>OUR LOCATION</h3>
-          <div class="map">
+          <!-- <div class="map">
             <YellowButton ButtonText="Find Us" />
-          </div>
+          </div> -->
+          <img
+            src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyDsUcTjt43mTheN9ruCsQVgBE-wgN6_AfY&language=en&center=Notting+Hill,London&maptype=roadmap&zoom=14&size=382x300&markers=icon:https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2017/03/construction_map_pin.png|Notting+Hill,London&scale=2"
+            alt="map"
+            id="map"
+          />
         </div>
       </div>
     </div>
@@ -116,6 +124,9 @@ h3 {
 .twitter-desc {
   font-size: 12px;
   color: white;
+  span {
+    color: #2970a7;
+  }
 }
 
 #twitter-img {
@@ -157,5 +168,9 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#map {
+  margin-top: 30px;
 }
 </style>
