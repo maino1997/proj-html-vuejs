@@ -155,6 +155,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../sass/vars.scss";
+
 section {
   padding-top: 60px;
 }
@@ -194,6 +196,12 @@ p {
 
 .fade-in {
   transition: 0.5s linear;
+}
+
+.yellow-bar {
+  height: 1.5px;
+  width: 200px;
+  background-color: $my-yellow;
 }
 
 .carousel {

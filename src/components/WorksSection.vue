@@ -9,6 +9,7 @@
           :title="card.title"
           :description="card.description"
           :icon="card.icon"
+          :hoverTitle="card.hoverTitle"
         />
       </div>
     </div>
@@ -99,24 +100,28 @@ export default {
       greyCards: [
         {
           title: "Buildings",
+          hoverTitle: "Artfully Created",
           icon: "bi-building",
           description:
             "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia",
         },
         {
           title: "Renovate",
+          hoverTitle: "Freshly New",
           icon: "bi-arrow-repeat",
           description:
             "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia",
         },
         {
           title: "Construct",
+          hoverTitle: "Perfect Lines",
           icon: "bi-house-door-fill",
           description:
             "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia",
         },
         {
           title: "Exclusive",
+          hoverTitle: "Planning",
           icon: "bi-truck",
           description:
             "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia",

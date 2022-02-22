@@ -30,6 +30,7 @@ export default {
 }
 .row {
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .col-8 {

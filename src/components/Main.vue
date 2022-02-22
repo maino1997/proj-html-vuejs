@@ -60,7 +60,7 @@ export default {
       showCards: [
         {
           url1: require("../assets/seconda.jpg"),
-          url2: require("../assets/quarta.jpg"),
+          url2: require("../assets/quinta.jpg"),
           title: "Redeveloping Florida’s Remote Southern Coast",
           description:
             "Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed",
@@ -71,7 +71,7 @@ export default {
         },
         {
           url1: require("../assets/prima.jpg"),
-          url2: require("../assets/quinta.jpg"),
+          url2: require("../assets/quarta.jpg"),
           title: "How We Manage Large Construction Projects",
           description:
             "Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed",

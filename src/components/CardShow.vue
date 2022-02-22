@@ -107,7 +107,7 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px 0;
+  padding: 40px 0;
   .show-inner {
     display: flex;
     justify-content: center;
@@ -122,7 +122,7 @@ p {
       justify-content: center;
       align-items: center;
       padding: 0;
-      margin-top: 50px;
+      margin-top: 62px;
       margin-right: 10px;
       margin-left: 10px;
       i {
@@ -138,5 +138,9 @@ p {
 .show-inner-description h4 {
   margin: 0;
   padding: 0;
+}
+
+.show-inner figure {
+  margin-top: 65px;
 }
 </style>

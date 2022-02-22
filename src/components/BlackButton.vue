@@ -15,9 +15,11 @@ export default {
 button {
   background-color: $my-black;
   border: 0;
-  padding: 10px 25px;
+  padding: 10px 32px;
   color: white;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 2px;
+
   &:hover {
     background-color: $my-yellow;
     color: black;

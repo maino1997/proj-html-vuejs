@@ -4,7 +4,7 @@
       <figure :class="bg">
         <i class="fas" :class="icon"></i>
       </figure>
-      <h3>{{ title }}</h3>
+      <h3 class="title">{{ title }}</h3>
       <div class="grey-bar"></div>
       <p>{{ description }}</p>
     </div>
@@ -40,6 +40,9 @@ figure {
   text-align: center;
   margin: auto;
   transition: 0.2s linear;
+  &:hover .title {
+    color: $my-yellow;
+  }
   &:hover {
     box-shadow: 0 1px 70px $my-yellow;
     background-color: $my-yellow;

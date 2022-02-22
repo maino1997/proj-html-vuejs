@@ -2,7 +2,7 @@
   <div class="col-3">
     <div class="card">
       <div class="over">
-        <h4>Artfully Created</h4>
+        <h4>{{ hoverTitle }}</h4>
         <p>{{ description }}</p>
         <button>GET A QUOTE</button>
       </div>
@@ -20,7 +20,7 @@
 <script>
 export default {
   name: "GreyCard",
-  props: ["title", "description", "icon"],
+  props: ["title", "description", "icon", "hoverTitle"],
 };
 </script>
 
@@ -34,7 +34,7 @@ export default {
   padding: 10px;
   border: 0;
   position: relative;
-  transition: transform 0.3s linear;
+  transition: transform 0.4s linear;
   margin-bottom: 80px;
 
   &:hover .over {

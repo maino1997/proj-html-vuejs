@@ -42,7 +42,7 @@
           </div>
         </div>
         <div class="col-3">
-          <h3>CONTACT US TODAY</h3>
+          <h3 id="contact">CONTACT US TODAY</h3>
           <div
             class="footer-address"
             v-for="date in footerContacts"
@@ -99,6 +99,8 @@ footer {
 #specialist {
   color: rgb(116, 116, 116);
   margin-top: 40px;
+  line-height: 34.05px;
+  font-size: 15px;
 }
 
 h3 {
@@ -147,10 +149,16 @@ h3 {
   margin-right: 150px;
 }
 
+#contact {
+  margin-bottom: 30px;
+}
+
 .footer-address {
   max-width: 250px;
   display: flex;
   font-size: 14px;
+  line-height: 23px;
+  margin-top: 5px;
   .bi {
     margin-right: 10px;
   }

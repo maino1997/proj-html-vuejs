@@ -15,8 +15,9 @@ export default {
 button {
   background-color: $my-yellow;
   border: 0;
-  padding: 10px 25px;
-  font-weight: 500;
+  padding: 10px 32px;
+  font-weight: 600;
+  letter-spacing: 2px;
   &:hover {
     background-color: rgb(51, 51, 51);
     color: white;
