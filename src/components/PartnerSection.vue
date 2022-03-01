@@ -102,6 +102,17 @@ export default {
     isIndex(index) {
       return index === this.currentIndex;
     },
+
+    // newPic(currIndex) {
+    //   if (currIndex === this.partners.length - 1) {
+    //     this[currIndex] = 0;
+    //     console.log("if");
+    //   } else {
+    //     this[currIndex]++;
+    //     console.log("else");
+    //   }
+    // },
+
     nextPic() {
       if (this.currentIndex === this.partners.length - 1) {
         this.currentIndex = 0;
@@ -147,6 +158,12 @@ export default {
   },
   created() {
     setInterval(() => {
+      // this.newPic("currentIndex");
+      // this.newPic("secondIndex");
+      // this.newPic("thirdIndex");
+      // this.newPic("fourthIndex");
+      // this.newPic("fitfthIndex");
+
       this.nextPic();
       this.secondNextPic();
       this.thirdNextPic();

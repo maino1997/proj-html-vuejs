@@ -67,11 +67,14 @@
           <!-- <div class="map">
             <YellowButton ButtonText="Find Us" />
           </div> -->
-          <img
-            src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyDsUcTjt43mTheN9ruCsQVgBE-wgN6_AfY&language=en&center=Notting+Hill,London&maptype=roadmap&zoom=14&size=382x300&markers=icon:https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2017/03/construction_map_pin.png|Notting+Hill,London&scale=2"
-            alt="map"
-            id="map"
-          />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d153836.1560726705!2d-1.310139122734894!3d52.95400191528019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487832d2390779cd%3A0x108063201919db15!2sNottingham%2C%20Regno%20Unito!5e0!3m2!1sit!2sit!4v1646157536908!5m2!1sit!2sit"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
         </div>
       </div>
     </div>
@@ -176,7 +179,7 @@ h3 {
   color: rgb(116, 116, 116);
 }
 
-.map {
+iframe {
   margin-top: 70px;
   background-color: black;
   width: 350px;
