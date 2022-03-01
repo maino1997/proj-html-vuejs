@@ -103,72 +103,21 @@ export default {
       return index === this.currentIndex;
     },
 
-    // newPic(currIndex) {
-    //   if (currIndex === this.partners.length - 1) {
-    //     this[currIndex] = 0;
-    //     console.log("if");
-    //   } else {
-    //     this[currIndex]++;
-    //     console.log("else");
-    //   }
-    // },
-
-    nextPic() {
-      if (this.currentIndex === this.partners.length - 1) {
-        this.currentIndex = 0;
+    newPic(currIndex) {
+      if (this[currIndex] === this.partners.length - 1) {
+        this[currIndex] = 0;
       } else {
-        this.currentIndex++;
-      }
-    },
-    secondNextPic() {
-      if (this.secondIndex === this.partners.length - 1) {
-        this.secondIndex = 0;
-      } else {
-        this.secondIndex++;
-      }
-    },
-    thirdNextPic() {
-      if (this.thirdIndex === this.partners.length - 1) {
-        this.thirdIndex = 0;
-      } else {
-        this.thirdIndex++;
-      }
-    },
-    fourthNextPic() {
-      if (this.fourthIndex === this.partners.length - 1) {
-        this.fourthIndex = 0;
-      } else {
-        this.fourthIndex++;
-      }
-    },
-    fitfthNextPic() {
-      if (this.fitfthIndex === this.partners.length - 1) {
-        this.fitfthIndex = 0;
-      } else {
-        this.fitfthIndex++;
-      }
-    },
-    sixNextPic() {
-      if (this.sixIndex === this.partners.length - 1) {
-        this.sixIndex = 0;
-      } else {
-        this.sixIndex++;
+        this[currIndex]++;
       }
     },
   },
   created() {
     setInterval(() => {
-      // this.newPic("currentIndex");
-      // this.newPic("secondIndex");
-      // this.newPic("thirdIndex");
-      // this.newPic("fourthIndex");
-      // this.newPic("fitfthIndex");
-
-      this.nextPic();
-      this.secondNextPic();
-      this.thirdNextPic();
-      this.fourthNextPic();
-      this.fitfthNextPic();
+      this.newPic("currentIndex");
+      this.newPic("secondIndex");
+      this.newPic("thirdIndex");
+      this.newPic("fourthIndex");
+      this.newPic("fitfthIndex");
     }, 3000);
   },
 };
